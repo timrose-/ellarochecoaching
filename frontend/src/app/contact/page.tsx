@@ -1,18 +1,45 @@
+"use client";
+
 import React from 'react'
+import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
+
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [stateMessage, setStateMessage] = useState(null);
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        emailjs.sendForm('service_9rseqbr', 'template_jhqmo8s', e.target as HTMLFormElement, 'rpIHr6RPEymsJ2cdB')
+        .then((result) => {
+            console.log(result.text);
+            setIsSubmitting(false);
+            setTimeout(() => {
+                setStateMessage(null);
+            }, 5000); // hide message after 5 seconds
+        }, (error) => {
+            console.log(error.text);
+            setIsSubmitting(false);
+            setTimeout(() => {
+            setStateMessage(null);
+            }, 5000); // hide message after 5 seconds
+        });
+        (e.target as HTMLFormElement).reset();
+    };
+
   return (
     <section className="min-h-screen bg-white dark:bg-gray-900">
     <div className="container px-6 py-10 mx-auto">
         <div className="lg:flex lg:items-center lg:-mx-10">
             <div className="lg:w-1/2 lg:mx-10">
-                <h1 className="text-2xl font-semibold text-gray-800 capitalize dark:text-white lg:text-3xl">Let’s talk</h1>
+                <h1 className="text-indigo-400 text-3xl font-light mb-4">Let’s Talk</h1>
 
                 <p className="mt-4 text-gray-500 dark:text-gray-400">
                     Ask me anything, I’m here to help you. Whether you have questions about coaching, want to book a session, or just want to say hello, feel free to reach out. I look forward to hearing from you!
                 </p>
 
-                <form className="mt-12">
+                <form className="mt-12" onSubmit={handleSubmit}>
                     <div className="-mx-2 md:items-center md:flex">
                         <div className="flex-1 px-2">
                             <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">Full Name</label>
@@ -30,7 +57,10 @@ export default function Contact() {
                         <textarea className="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-56 dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Message"></textarea>
                     </div>
 
-                    <button className="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
+                    <button
+                        type="submit"
+                        className="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50"
+                    >
                         get in touch
                     </button>
                 </form>

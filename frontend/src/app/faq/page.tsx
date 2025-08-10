@@ -49,29 +49,38 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <main style={{ maxWidth: 700, margin: '0 auto', padding: '2rem' }}>
-      <h1 style={{ textAlign: 'center', marginBottom: '2rem' }}>Frequently Asked Questions</h1>
-      <div style={{ display: 'grid', gap: '1.5rem' }}>
-        {faqs.map((faq, idx) => (
-          <div
-            key={idx}
-            style={{
-              border: '1px solid #e0e0e0',
-              borderRadius: 8,
-              padding: '1.5rem',
-              background: '#fafafa',
-              boxShadow: '0 2px 8px rgba(0,0,0,0.03)',
-            }}
-          >
-            <h2 style={{ margin: '0 0 0.5rem 0', fontSize: '1.1rem', color: '#333' }}>
-              {faq.question}
-            </h2>
-            <p style={{ margin: 0, color: '#555' }}>
-              {faq.answer || <span style={{ color: '#aaa' }}>Answer coming soon.</span>}
-            </p>
+    <main className="flex min-h-screen flex-col mt-12 px-24">
+      <section className="bg-white dark:bg-gray-900">
+
+        <div className="container max-w-4xl px-6 py-10 mx-auto">
+          <h1 className="text-indigo-400 text-left text-3xl font-light mb-4">Frequently Asked Questions</h1>
+
+          <div className="mt-12 space-y-8">
+            {faqs.map((faq, idx) => (
+
+              <div
+                key={idx}
+                style={{
+                  border: '1px solid #e0e0e0',
+                  borderRadius: 8,
+                  padding: '1.5rem',
+                  background: '#fafafa',
+                  boxShadow: '0 2px 8px rgba(0,0,0,0.03)',
+                }}
+              >
+
+                <h2 className="collapse-title font-semibold" style={{ margin: '0 0 0.5rem 0', fontSize: '1.1rem', color: '#333' }}>
+                  {faq.question}
+                </h2>
+                <p className="collapse-content text-sm" style={{ margin: 0, color: '#555' }}>
+                  {faq.answer || <span style={{ color: '#aaa' }}>Answer coming soon.</span>}
+                </p>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </div>
+      </section>
+
     </main>
   );
 }
