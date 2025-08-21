@@ -1,36 +1,111 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #fffefe;
-  --foreground: #242424;
+  --color-base: #ECDFCC;
+  --color-header: #7E9278;
+  --color-earth1: #A89F91;
+  --color-earth2: #C2B8A3;
+  --color-earth3: #B7A684;
+  --color-earth4: #8C7B6B;
+  --color-earth4-dark: #6B5A4A;
+  --color-earth5: #D9CBB3;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--color-base);
+  --color-foreground: var(--color-header);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #242424;
-    --foreground: #fffefe;
+    --background: var(--color-base);
+    --foreground: var(--color-header);
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  background: var(--color-base);
+  color: var(--color-earth4);
+  font-family: 'Inter', 'Roboto', Arial, Helvetica, sans-serif;
 }
 
-.custom-shape-divider-top {
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-header);
+  font-family: 'Chivo', 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+/* .custom-shape-divider-top {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
+} */
+
+.header {
+  color: var(--color-header);
+}
+
+.bg-base {
+  background-color: var(--color-base);
+}
+
+.bg-earth1 {
+  background-color: var(--color-earth1);
+}
+
+.bg-earth2 {
+  background-color: var(--color-earth2);
+}
+
+.bg-earth3 {
+  background-color: var(--color-earth3);
+}
+
+.bg-earth4 {
+  background-color: var(--color-earth4);
+}
+
+.bg-earth5 {
+  background-color: var(--color-earth5);
+}
+
+.navbar-earth {
+  background-color: var(--color-earth5);
+  font-family: 'Chivo', 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.footer-earth {
+  background-color: var(--color-earth5);
+  font-family: 'Inter', 'Roboto', Arial, Helvetica, sans-serif;
+  color: var(--color-earth4);
+}
+
+.navbar-border-active {
+  border-bottom-color: var(--color-header);
+  color: var(--color-earth4-dark);
+}
+
+.navbar-border {
+  border-color: transparent;
+}
+
+.navbar-border:hover {
+  border-bottom-color: var(--color-header);
+  transition: border-bottom 0.2s ease;
+  color: var(--color-earth4-dark);
+}
+
+.testimonials-card {
+  background-color: var(--color-earth5);
+  border: 1px solid var(--color-earth3);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

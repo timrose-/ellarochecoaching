@@ -65,24 +65,24 @@ export default function Testimonials() {
                     className="hidden md:block absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-8/7 w-72 opacity-60 scale-90 pointer-events-none transition-all duration-300"
                     aria-hidden="true"
                 >
-                    <div className="bg-white rounded-lg shadow p-6 text-justified border border-gray-100">
+                    <div className="testimonials-card rounded-lg shadow p-6 text-justified border border-gray-100">
                         <p className="text-sm italic text-gray-500 mb-2 line-clamp-4">
                             "{testimonials[prevIdx].text}"
                         </p>
                         <div className="mt-2">
-                            <span className="font-semibold text-indigo-400">{testimonials[prevIdx].name}</span>
+                            <h1>{testimonials[prevIdx].name}</h1>
                             <span className="block text-xs text-gray-400">{testimonials[prevIdx].title}</span>
                         </div>
                     </div>
                 </div>
 
                 {/* Main card */}
-                <div className="relative bg-white rounded-lg shadow-lg p-8 text-justified z-10 w-full mx-4">
+                <div className="relative testimonials-card rounded-lg shadow-lg p-8 text-justified z-10 w-full mx-4">
                     <p className="text-md italic text-gray-700 mb-4 whitespace-pre-line">
                         "{testimonials[current].text}"
                     </p>
                     <div className="mt-4">
-                        <span className="font-semibold text-indigo-600">{testimonials[current].name}</span>
+                        <h1>{testimonials[current].name}</h1>
                         <span className="block text-sm text-gray-500">{testimonials[current].title}</span>
                     </div>
                     <div className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-1/2">
@@ -114,12 +114,12 @@ export default function Testimonials() {
                     className="hidden md:block absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-8/7 w-72 opacity-60 scale-90 pointer-events-none transition-all duration-300"
                     aria-hidden="true"
                 >
-                    <div className="bg-white rounded-lg shadow p-6 text-justified border border-gray-100">
+                    <div className="testimonials-card rounded-lg shadow p-6 text-justified border border-gray-100">
                         <p className="text-sm italic text-gray-500 mb-2 line-clamp-4">
                             "{testimonials[nextIdx].text}"
                         </p>
                         <div className="mt-2">
-                            <span className="font-semibold text-indigo-400">{testimonials[nextIdx].name}</span>
+                            <h1>{testimonials[nextIdx].name}</h1>
                             <span className="block text-xs text-gray-400">{testimonials[nextIdx].title}</span>
                         </div>
                     </div>
