@@ -5,13 +5,13 @@
 
 :root {
   --color-base: #ECDFCC;
-  --color-header: #7E9278;
-  --color-earth1: #A89F91;
-  --color-earth2: #C2B8A3;
-  --color-earth3: #B7A684;
-  --color-earth4: #8C7B6B;
-  --color-earth4-dark: #6B5A4A;
-  --color-earth5: #D9CBB3;
+  --color-header: #66775F;
+  --color-earth1: #877F73;
+  --color-earth2: #9B9472;
+  --color-earth3: #95825B;
+  --color-earth4: #6F6357;
+  --color-earth4-dark: #57473A;
+  --color-earth5: #B1A28F;
 }
 
 @theme inline {

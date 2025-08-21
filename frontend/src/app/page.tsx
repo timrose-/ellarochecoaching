@@ -48,7 +48,7 @@ export default function Home() {
             />
           </div>
           <div className="w-full md:w-1/2 text-center md:text-left">
-            <h2 className="text-4xl font-light mb-4">Welcome to Ella Roche Coaching</h2>
+            <h2 className="text-4xl font-light mb-8">Welcome to Ella Roche Coaching</h2>
             <p className="text-md font-light">
               Hello, I'm Ella. I'm an Animas certified performance and mindset coach. I believe that everyone should have access to coaching to help facilitate change and overcome barriers in their professional lives. It's not just for the C-Suite. It's for anyone who wants to make a change at work and is unsure how. 
             </p>
@@ -68,7 +68,7 @@ export default function Home() {
       {/* <hr className="w-full border-t my-12" /> */}
 
       <section id="testimonials" className="w-full py-20 px-24">
-            <h2 className="text-4xl font-light mb-4">Testimonials</h2>
+            <h2 className="text-4xl font-light mb-8">Testimonials</h2>
             <p className="text-md">
               Here are some testimonials from clients I've worked with. If you'd like to see more, please visit my <a href="https://www.linkedin.com/in/ella-roche-1b0b4a1b2/" className="text-indigo-600 hover:underline">LinkedIn</a> page.
             </p>
@@ -79,7 +79,7 @@ export default function Home() {
 
       <section id="accreditations" className="w-full py-20 px-24">
         <h2 className="text-4xl font-light mb-4">Accreditations</h2>
-        <p className="text-md mb-4">
+        <p className="text-md mb-8">
           I am an Animas certified performance and mindset coach, and a member of the International Coaching Federation (ICF). I also hold a diploma in coaching and mentoring.
         </p>
         <div className="flex justify-center items-center space-x-8">

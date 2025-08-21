@@ -17,7 +17,7 @@ export default function Navbar() {
     const pathname = usePathname();
 
     return (
-        <nav className="navbar-earth shadow">
+        <nav className="shadow">
             <div className="container flex items-center justify-center p-6 mx-auto capitalize">
                 <div className="flex items-center justify-start flex-1">
                     <Link href="/" className="flex items-center">
